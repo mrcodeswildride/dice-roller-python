@@ -14,4 +14,10 @@ for i in range(num_rolls):
 print()
 
 for roll, count in rolls.items():
-  print(f"{roll}: {count / num_rolls * 100}%")
+  decimal = count / num_rolls
+  percent = decimal * 100
+
+  if roll < 10:
+    print(f" {roll}: {percent:.2f}%")
+  else:
+    print(f"{roll}: {percent:.2f}%")
